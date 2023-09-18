@@ -1,0 +1,65 @@
+/* Universal rules */
+* {
+    font-family: 'Courier New', Courier, monospace;
+    /* temporary font family */
+}
+
+/* Establish variables */
+:root {
+    --main--bg: white;
+}
+
+h2 {
+    /* right border box, establish consistent width */
+    /* 
+        Consider formatting to move from left side of screen to above
+        section on screen size change
+    */
+}
+
+/* Header + nav formatting */
+header {}
+
+header nav {}
+
+header img {
+    height: 100px;
+}
+
+/* Hero image formatting */
+h3 span {
+    color: peachpuff;
+}
+
+/* Project section formatting */
+main {}
+
+main article:first-child {
+    /* Format first project to scale to full width */
+}
+
+main article {
+    /* format to wrap evenly from line to line */
+}
+
+main h3 {}
+
+main p {}
+
+main a {}
+
+/* Contact Formatting */
+
+footer {}
+
+footer nav {
+    /* Push to right side */
+}
+
+footer ul {
+    /* content in row */
+}
+
+footer a {
+    /* reformat links to not be ugly. Will need to add section with link pseudo classes */
+}
