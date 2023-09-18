@@ -7,23 +7,59 @@
 /* Establish variables */
 :root {
     --main--bg: white;
+    --primary-foreground: black;
+    --secondary-foreground: gray;
 }
 
 h2 {
-    /* right border box, establish consistent width */
+    /* right border, establish consistent width */
+    border-right: 3px solid var(--primary-foreground);
+    width: 20vw;
+    font-size: 40px;
     /* 
         Consider formatting to move from left side of screen to above
-        section on screen size change
+        section on screen size change (through media query)
     */
 }
 
 /* Header + nav formatting */
-header {}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+}
 
-header nav {}
+header figure {
+    /* Push left */
+    display: flex;
+    align-items: flex-start;
+}
+
+header figcaption {}
 
 header img {
     height: 100px;
+    border-radius: 100% 100% 0 0;
+}
+
+header nav,
+footer nav {
+    /* Push right */
+    display: flex;
+    align-items: flex-end;
+}
+
+header ul,
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+header li,
+footer li {
+    margin: 5px;
 }
 
 /* Hero image formatting */
@@ -31,11 +67,19 @@ h3 span {
     color: peachpuff;
 }
 
+#about {
+    display: flex;
+}
+
 /* Project section formatting */
-main {}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 main article:first-child {
     /* Format first project to scale to full width */
+    width: 100%;
 }
 
 main article {
@@ -50,7 +94,11 @@ main a {}
 
 /* Contact Formatting */
 
-footer {}
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
 
 footer nav {
     /* Push to right side */
