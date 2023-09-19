@@ -20,7 +20,8 @@ h2 {
     font-size: 40px;
     /* width: 200px; */
     flex: 0 0 200px;
-    margin-right: 15px;
+    margin: 15px;
+    color: var(--primary-text);
     /* 
         Consider formatting to move from left side of screen to above
         section on screen size change (through media query)
@@ -49,36 +50,58 @@ header figure {
     /* Push left */
     display: flex;
     align-items: flex-start;
+    flex-direction: column-reverse;
 }
 
-header figcaption {}
+header figcaption {
+    color: var(--primary-text);
+}
 
 header img {
     height: 100px;
     border-radius: 100% 100% 0 0;
 }
 
-header nav,
-footer nav {
+header nav {
     /* Push right */
     display: flex;
     align-items: flex-end;
 }
 
-header ul,
-footer ul {
+header ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-header li,
-footer li {
-    margin: 5px;
+nav li {
+    font-size: 20px;
+    padding: 5px;
+}
+
+header li:hover {
+    background-color: var(--secondary--bg);
 }
 
 /* Hero image formatting */
-h3 span {
+#hero {
+    background-image: url(../images/banner-clouds.jpg);
+    background-size: cover;
+    background-position: 0 300px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#hero h3 {
+    padding: 10px;
+    border-radius: 50px 0 0 50px;
+    background-color: var(--secondary--bg);
+    color: var(--primary-text);
+}
+
+#hero span {
     color: peachpuff;
 }
 
@@ -97,7 +120,7 @@ main {
     background-color: var(--secondary--bg);
 }
 
-main section {
+main>section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -118,7 +141,18 @@ main section {
 #projects article {
     margin: 10px;
     border: 3px solid var(--primary-foreground);
-    /* line-height: 0px; */
+    line-height: 0px;
+    position: relative;
+}
+
+#projects section {
+    background-color: var(--secondary--bg);
+    border: 3px solid var(--primary-foreground);
+    border-radius: 0 0 25px 0;
+    line-height: 1.3;
+    position: absolute;
+    left: -3px;
+    top: 50%;
 }
 
 #projects a img {
@@ -162,10 +196,11 @@ main a:visited {
     /* content in row */
 }
 
-#contact li {
-    margin: 5px;
+#contact li:hover {
+    background-color: var(--main--bg);
 }
 
 #contact a {
+    font-size: 20px;
     /* reformat links to not be ugly. Will need to add section with link pseudo classes */
 }
