@@ -77,6 +77,11 @@ header ul {
 nav li {
     font-size: 20px;
     padding: 5px;
+    border-left: 2px solid var(--primary-foreground);
+}
+
+nav li:first-child {
+    border-left: none;
 }
 
 header li:hover {
@@ -203,4 +208,36 @@ main a:visited {
 #contact a {
     font-size: 20px;
     /* reformat links to not be ugly. Will need to add section with link pseudo classes */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header ul {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header li {
+        justify-content: center;
+    }
+
+
+    main>section {
+        flex-direction: column;
+    }
+
+    main h2 {
+        border-right: none;
+        border-bottom: 3px solid var(--primary-foreground);
+        flex: 0 0 0;
+    }
+
 }
