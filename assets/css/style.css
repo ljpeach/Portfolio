@@ -14,8 +14,9 @@
 h2 {
     /* right border, establish consistent width */
     border-right: 3px solid var(--primary-foreground);
-    width: 20vw;
     font-size: 40px;
+    /* width: 200px; */
+    flex: 0 0 200px;
     /* 
         Consider formatting to move from left side of screen to above
         section on screen size change (through media query)
@@ -67,17 +68,31 @@ h3 span {
     color: peachpuff;
 }
 
-#about {
+#about p {
     display: flex;
+    flex: 1 1 0;
 }
 
 /* Project section formatting */
 main {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
 }
 
-main article:first-child {
+main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 0px;
+}
+
+#projects li:first-child {
     /* Format first project to scale to full width */
     width: 100%;
 }
@@ -86,28 +101,31 @@ main article {
     /* format to wrap evenly from line to line */
 }
 
-main h3 {}
-
-main p {}
+main h3 {
+    font-size: 20px;
+}
 
 main a {}
 
 /* Contact Formatting */
 
-footer {
+#contact nav {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
+    align-items: center;
 }
 
-footer nav {
-    /* Push to right side */
-}
+#contact ul {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
 
-footer ul {
     /* content in row */
 }
 
-footer a {
+#contact li {
+    margin: 5px;
+}
+
+#contact a {
     /* reformat links to not be ugly. Will need to add section with link pseudo classes */
 }
